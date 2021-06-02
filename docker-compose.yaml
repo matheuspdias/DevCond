@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  devcond-app:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx
+    networks: 
+    - default
+
+  devcond-db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - .docker/db:/var/lib/mysql
+    environment: 
+      MYSQL_DATABASE: devcond
+      MYSQL_ROOT_PASSWORD: secret
+    networks: 
+      - default
+networks: 
+  default:
+    driver: bridge
