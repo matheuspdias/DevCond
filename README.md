@@ -1,3 +1,5 @@
 ## API - DEVCOND
 
-docker-compose run artisan migrate
+- docker-compose up
+
+- docker-compose run artisan migrate

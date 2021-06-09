@@ -39,6 +39,7 @@ class CreateAllTables extends Migration
 
         Schema::create('unitvehicles', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_unit');
             $table->string('title');
             $table->string('color');
             $table->string('plate');
@@ -47,6 +48,7 @@ class CreateAllTables extends Migration
 
         Schema::create('unitpets', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_unit');
             $table->string('name');
             $table->string('race');
             $table->timestamps();
