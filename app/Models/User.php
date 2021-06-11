@@ -11,6 +11,8 @@ class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable;
 
+    public $table = 'users';
+
     protected $fillable = [
         'name',
         'email',
@@ -25,7 +27,7 @@ class User extends Authenticatable implements JWTSubject
     protected $casts = [
         'name' => 'string',
         'email' => 'string',
-        'cpf' => 'string'
+        'cpf' => 'string',
         'password' => 'string'
     ];
 
