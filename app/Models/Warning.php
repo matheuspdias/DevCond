@@ -21,12 +21,10 @@ class Warning extends Model
         'id_unit' => 'integer',
         'title' => 'string',
         'status' => 'string',
-        'photos' => 'text'
     ];
 
     protected $dates = [
         'created_at',
-        'updated_at',
-        'datecreated'
+        'updated_at'
     ];
 }
